@@ -76,6 +76,9 @@ font-weight: bold;</string>
      <string>パソコン情報</string>
     </property>
     <widget class="QPushButton" name="btnNewPcRegister">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -107,7 +110,12 @@ QPushButton:pressed {
     background-color: #C5D9EE;      /* 押下：さらに濃い青 */
     color: #000000;                 /* 黒字のまま */
 }
-</string>
+
+QPushButton:disabled {
+    background-color: #F6F6F6;
+    color: #808080;
+    border: 1px solid #D9D9D9;
+}</string>
      </property>
      <property name="text">
       <string>新規登録</string>
@@ -147,7 +155,7 @@ QPushButton:pressed {
     </widget>
     <widget class="QPushButton" name="btnSearchEdit">
      <property name="enabled">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <property name="geometry">
       <rect>
@@ -156,6 +164,24 @@ QPushButton:pressed {
        <width>331</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #E8F6EC;   /* 通常：淡い緑 */
+    color: #000000;
+    border: 1px solid #A9D3B2;   /* 淡い緑の枠線 */
+    border-radius: 0px;
+}
+
+QPushButton:hover {
+    background-color: #D9EFDF;   /* ホバー */
+    color: #000000;
+}
+
+QPushButton:pressed {
+    background-color: #C6E5CE;   /* 押下 */
+    color: #000000;
+}</string>
      </property>
      <property name="text">
       <string>検索・編集</string>
@@ -181,6 +207,9 @@ QPushButton:pressed {
      <string>ユーザーマスタ</string>
     </property>
     <widget class="QPushButton" name="btnUserMasterRegister">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -188,6 +217,12 @@ QPushButton:pressed {
        <width>201</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Meiryo</family>
+       <pointsize>20</pointsize>
+      </font>
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
@@ -206,7 +241,12 @@ QPushButton:pressed {
     background-color: #C5D9EE;      /* 押下：さらに濃い青 */
     color: #000000;                 /* 黒字のまま */
 }
-</string>
+
+QPushButton:disabled {
+    background-color: #F6F6F6;
+    color: #808080;
+    border: 1px solid #D9D9D9;
+}</string>
      </property>
      <property name="text">
       <string>登録</string>
@@ -214,7 +254,7 @@ QPushButton:pressed {
     </widget>
     <widget class="QPushButton" name="btnUserMasterEdit">
      <property name="enabled">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <property name="geometry">
       <rect>
@@ -223,6 +263,24 @@ QPushButton:pressed {
        <width>201</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #E8F6EC;   /* 通常：淡い緑 */
+    color: #000000;
+    border: 1px solid #A9D3B2;   /* 淡い緑の枠線 */
+    border-radius: 0px;
+}
+
+QPushButton:hover {
+    background-color: #D9EFDF;   /* ホバー */
+    color: #000000;
+}
+
+QPushButton:pressed {
+    background-color: #C6E5CE;   /* 押下 */
+    color: #000000;
+}</string>
      </property>
      <property name="text">
       <string>変更・修正</string>
@@ -248,6 +306,9 @@ QPushButton:pressed {
      <string>パソコンマスタ</string>
     </property>
     <widget class="QPushButton" name="btnPcMasterRegister">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -255,6 +316,12 @@ QPushButton:pressed {
        <width>201</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Meiryo</family>
+       <pointsize>20</pointsize>
+      </font>
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
@@ -269,6 +336,12 @@ QPushButton:hover {
     color: #000000;                 /* 黒字のまま */
 }
 
+QPushButton:disabled {
+    background-color: #F6F6F6;
+    color: #808080;
+    border: 1px solid #D9D9D9;
+}
+
 QPushButton:pressed {
     background-color: #C5D9EE;      /* 押下：さらに濃い青 */
     color: #000000;                 /* 黒字のまま */
@@ -281,7 +354,7 @@ QPushButton:pressed {
     </widget>
     <widget class="QPushButton" name="btnPcMasterEdit">
      <property name="enabled">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <property name="geometry">
       <rect>
@@ -290,6 +363,24 @@ QPushButton:pressed {
        <width>201</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #E8F6EC;   /* 通常：淡い緑 */
+    color: #000000;
+    border: 1px solid #A9D3B2;   /* 淡い緑の枠線 */
+    border-radius: 0px;
+}
+
+QPushButton:hover {
+    background-color: #D9EFDF;   /* ホバー */
+    color: #000000;
+}
+
+QPushButton:pressed {
+    background-color: #C6E5CE;   /* 押下 */
+    color: #000000;
+}</string>
      </property>
      <property name="text">
       <string>変更・修正</string>

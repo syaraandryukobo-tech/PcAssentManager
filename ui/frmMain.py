@@ -49,6 +49,7 @@ class Ui_MainWindow(object):
         self.grpPcInfo.setFont(font1)
         self.btnNewPcRegister = QPushButton(self.grpPcInfo)
         self.btnNewPcRegister.setObjectName(u"btnNewPcRegister")
+        self.btnNewPcRegister.setEnabled(False)
         self.btnNewPcRegister.setGeometry(QRect(90, 50, 331, 51))
         font2 = QFont()
         font2.setFamilies([u"Meiryo"])
@@ -70,7 +71,12 @@ class Ui_MainWindow(object):
 "    background-color: #C5D9EE;      /* \u62bc\u4e0b\uff1a\u3055\u3089\u306b\u6fc3\u3044\u9752 */\n"
 "    color: #000000;                 /* \u9ed2\u5b57\u306e\u307e\u307e */\n"
 "}\n"
-"")
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: #F6F6F6;\n"
+"    color: #808080;\n"
+"    border: 1px solid #D9D9D9;\n"
+"}")
         self.btnTransfer = QPushButton(self.grpPcInfo)
         self.btnTransfer.setObjectName(u"btnTransfer")
         self.btnTransfer.setEnabled(False)
@@ -81,15 +87,33 @@ class Ui_MainWindow(object):
         self.btnDispose.setGeometry(QRect(90, 190, 331, 51))
         self.btnSearchEdit = QPushButton(self.grpPcInfo)
         self.btnSearchEdit.setObjectName(u"btnSearchEdit")
-        self.btnSearchEdit.setEnabled(False)
+        self.btnSearchEdit.setEnabled(True)
         self.btnSearchEdit.setGeometry(QRect(90, 270, 331, 51))
+        self.btnSearchEdit.setStyleSheet(u"QPushButton {\n"
+"    background-color: #E8F6EC;   /* \u901a\u5e38\uff1a\u6de1\u3044\u7dd1 */\n"
+"    color: #000000;\n"
+"    border: 1px solid #A9D3B2;   /* \u6de1\u3044\u7dd1\u306e\u67a0\u7dda */\n"
+"    border-radius: 0px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #D9EFDF;   /* \u30db\u30d0\u30fc */\n"
+"    color: #000000;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #C6E5CE;   /* \u62bc\u4e0b */\n"
+"    color: #000000;\n"
+"}")
         self.grpUserMaster = QGroupBox(self.centralwidget)
         self.grpUserMaster.setObjectName(u"grpUserMaster")
         self.grpUserMaster.setGeometry(QRect(630, 80, 511, 111))
         self.grpUserMaster.setFont(font1)
         self.btnUserMasterRegister = QPushButton(self.grpUserMaster)
         self.btnUserMasterRegister.setObjectName(u"btnUserMasterRegister")
+        self.btnUserMasterRegister.setEnabled(False)
         self.btnUserMasterRegister.setGeometry(QRect(40, 40, 201, 51))
+        self.btnUserMasterRegister.setFont(font1)
         self.btnUserMasterRegister.setStyleSheet(u"QPushButton {\n"
 "    background-color: #E6F0FA;      /* \u901a\u5e38\uff1a\u6de1\u3044\u9752 */\n"
 "    color: #000000;                 /* \u9ed2\u5b57 */\n"
@@ -106,18 +130,41 @@ class Ui_MainWindow(object):
 "    background-color: #C5D9EE;      /* \u62bc\u4e0b\uff1a\u3055\u3089\u306b\u6fc3\u3044\u9752 */\n"
 "    color: #000000;                 /* \u9ed2\u5b57\u306e\u307e\u307e */\n"
 "}\n"
-"")
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: #F6F6F6;\n"
+"    color: #808080;\n"
+"    border: 1px solid #D9D9D9;\n"
+"}")
         self.btnUserMasterEdit = QPushButton(self.grpUserMaster)
         self.btnUserMasterEdit.setObjectName(u"btnUserMasterEdit")
-        self.btnUserMasterEdit.setEnabled(False)
+        self.btnUserMasterEdit.setEnabled(True)
         self.btnUserMasterEdit.setGeometry(QRect(270, 40, 201, 51))
+        self.btnUserMasterEdit.setStyleSheet(u"QPushButton {\n"
+"    background-color: #E8F6EC;   /* \u901a\u5e38\uff1a\u6de1\u3044\u7dd1 */\n"
+"    color: #000000;\n"
+"    border: 1px solid #A9D3B2;   /* \u6de1\u3044\u7dd1\u306e\u67a0\u7dda */\n"
+"    border-radius: 0px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #D9EFDF;   /* \u30db\u30d0\u30fc */\n"
+"    color: #000000;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #C6E5CE;   /* \u62bc\u4e0b */\n"
+"    color: #000000;\n"
+"}")
         self.grpPCMaster = QGroupBox(self.centralwidget)
         self.grpPCMaster.setObjectName(u"grpPCMaster")
         self.grpPCMaster.setGeometry(QRect(630, 210, 511, 111))
         self.grpPCMaster.setFont(font1)
         self.btnPcMasterRegister = QPushButton(self.grpPCMaster)
         self.btnPcMasterRegister.setObjectName(u"btnPcMasterRegister")
+        self.btnPcMasterRegister.setEnabled(False)
         self.btnPcMasterRegister.setGeometry(QRect(40, 40, 201, 51))
+        self.btnPcMasterRegister.setFont(font1)
         self.btnPcMasterRegister.setStyleSheet(u"QPushButton {\n"
 "    background-color: #E6F0FA;      /* \u901a\u5e38\uff1a\u6de1\u3044\u9752 */\n"
 "    color: #000000;                 /* \u9ed2\u5b57 */\n"
@@ -130,6 +177,12 @@ class Ui_MainWindow(object):
 "    color: #000000;                 /* \u9ed2\u5b57\u306e\u307e\u307e */\n"
 "}\n"
 "\n"
+"QPushButton:disabled {\n"
+"    background-color: #F6F6F6;\n"
+"    color: #808080;\n"
+"    border: 1px solid #D9D9D9;\n"
+"}\n"
+"\n"
 "QPushButton:pressed {\n"
 "    background-color: #C5D9EE;      /* \u62bc\u4e0b\uff1a\u3055\u3089\u306b\u6fc3\u3044\u9752 */\n"
 "    color: #000000;                 /* \u9ed2\u5b57\u306e\u307e\u307e */\n"
@@ -137,8 +190,24 @@ class Ui_MainWindow(object):
 "")
         self.btnPcMasterEdit = QPushButton(self.grpPCMaster)
         self.btnPcMasterEdit.setObjectName(u"btnPcMasterEdit")
-        self.btnPcMasterEdit.setEnabled(False)
+        self.btnPcMasterEdit.setEnabled(True)
         self.btnPcMasterEdit.setGeometry(QRect(270, 40, 201, 51))
+        self.btnPcMasterEdit.setStyleSheet(u"QPushButton {\n"
+"    background-color: #E8F6EC;   /* \u901a\u5e38\uff1a\u6de1\u3044\u7dd1 */\n"
+"    color: #000000;\n"
+"    border: 1px solid #A9D3B2;   /* \u6de1\u3044\u7dd1\u306e\u67a0\u7dda */\n"
+"    border-radius: 0px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #D9EFDF;   /* \u30db\u30d0\u30fc */\n"
+"    color: #000000;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #C6E5CE;   /* \u62bc\u4e0b */\n"
+"    color: #000000;\n"
+"}")
         self.grpOutput = QGroupBox(self.centralwidget)
         self.grpOutput.setObjectName(u"grpOutput")
         self.grpOutput.setGeometry(QRect(630, 340, 511, 271))
