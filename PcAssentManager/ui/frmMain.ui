@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1200</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>20</y>
+      <width>321</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Meiryo</family>
+      <pointsize>24</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #003366;
+font-size: 24pt;
+font-weight: bold;</string>
+    </property>
+    <property name="text">
+     <string>パソコン管理台帳</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="grpPcInfo">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>80</y>
+      <width>511</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Meiryo</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>パソコン情報</string>
+    </property>
+    <widget class="QPushButton" name="btnNewPcRegister">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>50</y>
+       <width>331</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Meiryo</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #E6F0FA;      /* 通常：淡い青 */
+    color: #000000;                 /* 黒字 */
+    border: 1px solid #AFC7E3;      /* 薄い青の枠線 */
+    border-radius: 0px;             /* 角丸なし */
+}
+
+QPushButton:hover {
+    background-color: #D6E6F5;      /* ホバー：少し濃い青 */
+    color: #000000;                 /* 黒字のまま */
+}
+
+QPushButton:pressed {
+    background-color: #C5D9EE;      /* 押下：さらに濃い青 */
+    color: #000000;                 /* 黒字のまま */
+}
+
+QPushButton:disabled {
+    background-color: #F6F6F6;
+    color: #808080;
+    border: 1px solid #D9D9D9;
+}</string>
+     </property>
+     <property name="text">
+      <string>新規登録</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnTransfer">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>120</y>
+       <width>331</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>移動・譲渡・予備機</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnDispose">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>190</y>
+       <width>331</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>廃棄</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnSearchEdit">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>270</y>
+       <width>331</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #E8F6EC;   /* 通常：淡い緑 */
+    color: #000000;
+    border: 1px solid #A9D3B2;   /* 淡い緑の枠線 */
+    border-radius: 0px;
+}
+
+QPushButton:hover {
+    background-color: #D9EFDF;   /* ホバー */
+    color: #000000;
+}
+
+QPushButton:pressed {
+    background-color: #C6E5CE;   /* 押下 */
+    color: #000000;
+}</string>
+     </property>
+     <property name="text">
+      <string>検索・編集</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="grpUserMaster">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>80</y>
+      <width>511</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Meiryo</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>ユーザーマスタ</string>
+    </property>
+    <widget class="QPushButton" name="btnUserMasterRegister">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>40</y>
+       <width>201</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Meiryo</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #E6F0FA;      /* 通常：淡い青 */
+    color: #000000;                 /* 黒字 */
+    border: 1px solid #AFC7E3;      /* 薄い青の枠線 */
+    border-radius: 0px;             /* 角丸なし */
+}
+
+QPushButton:hover {
+    background-color: #D6E6F5;      /* ホバー：少し濃い青 */
+    color: #000000;                 /* 黒字のまま */
+}
+
+QPushButton:pressed {
+    background-color: #C5D9EE;      /* 押下：さらに濃い青 */
+    color: #000000;                 /* 黒字のまま */
+}
+
+QPushButton:disabled {
+    background-color: #F6F6F6;
+    color: #808080;
+    border: 1px solid #D9D9D9;
+}</string>
+     </property>
+     <property name="text">
+      <string>登録</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnUserMasterEdit">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>40</y>
+       <width>201</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #E8F6EC;   /* 通常：淡い緑 */
+    color: #000000;
+    border: 1px solid #A9D3B2;   /* 淡い緑の枠線 */
+    border-radius: 0px;
+}
+
+QPushButton:hover {
+    background-color: #D9EFDF;   /* ホバー */
+    color: #000000;
+}
+
+QPushButton:pressed {
+    background-color: #C6E5CE;   /* 押下 */
+    color: #000000;
+}</string>
+     </property>
+     <property name="text">
+      <string>変更・修正</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="grpPCMaster">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>210</y>
+      <width>511</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Meiryo</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>パソコンマスタ</string>
+    </property>
+    <widget class="QPushButton" name="btnPcMasterRegister">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>40</y>
+       <width>201</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Meiryo</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #E6F0FA;      /* 通常：淡い青 */
+    color: #000000;                 /* 黒字 */
+    border: 1px solid #AFC7E3;      /* 薄い青の枠線 */
+    border-radius: 0px;             /* 角丸なし */
+}
+
+QPushButton:hover {
+    background-color: #D6E6F5;      /* ホバー：少し濃い青 */
+    color: #000000;                 /* 黒字のまま */
+}
+
+QPushButton:disabled {
+    background-color: #F6F6F6;
+    color: #808080;
+    border: 1px solid #D9D9D9;
+}
+
+QPushButton:pressed {
+    background-color: #C5D9EE;      /* 押下：さらに濃い青 */
+    color: #000000;                 /* 黒字のまま */
+}
+</string>
+     </property>
+     <property name="text">
+      <string>登録</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnPcMasterEdit">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>40</y>
+       <width>201</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #E8F6EC;   /* 通常：淡い緑 */
+    color: #000000;
+    border: 1px solid #A9D3B2;   /* 淡い緑の枠線 */
+    border-radius: 0px;
+}
+
+QPushButton:hover {
+    background-color: #D9EFDF;   /* ホバー */
+    color: #000000;
+}
+
+QPushButton:pressed {
+    background-color: #C6E5CE;   /* 押下 */
+    color: #000000;
+}</string>
+     </property>
+     <property name="text">
+      <string>変更・修正</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="grpOutput">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>340</y>
+      <width>511</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Meiryo</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>出力</string>
+    </property>
+    <widget class="QPushButton" name="btnLocationReport">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>50</y>
+       <width>331</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Meiryo</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>拠点･部別リスト</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnPcEtcDisposeReport">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>120</y>
+       <width>331</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Meiryo</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>PC等廃棄リスト</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnDisposeLabel">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>190</y>
+       <width>331</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Meiryo</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>廃棄パソコンラベル</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btnClose">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>630</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Meiryo</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #E0E0E0;      /* 背景より少し濃いグレー */
+    color: #000000;                 /* 黒字 */
+    border: 1px solid #B8B8B8;      /* 薄いグレーの枠線 */
+    border-radius: 0px;             /* 角丸なし */
+}
+
+QPushButton:hover {
+    background-color: #D0D0D0;      /* ホバー：少し濃いグレー */
+    color: #000000;                 /* 黒字のまま */
+}
+
+QPushButton:pressed {
+    background-color: #C0C0C0;      /* 押下：さらに濃いグレー */
+    color: #000000;                 /* 黒字のまま */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>閉じる</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
