@@ -90,7 +90,7 @@ font-weight: bold;</string>
      <property name="font">
       <font>
        <family>Meiryo</family>
-       <pointsize>18</pointsize>
+       <pointsize>20</pointsize>
       </font>
      </property>
      <property name="styleSheet">

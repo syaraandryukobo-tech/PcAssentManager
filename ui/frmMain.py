@@ -51,10 +51,7 @@ class Ui_MainWindow(object):
         self.btnNewPcRegister.setObjectName(u"btnNewPcRegister")
         self.btnNewPcRegister.setEnabled(False)
         self.btnNewPcRegister.setGeometry(QRect(90, 50, 331, 51))
-        font2 = QFont()
-        font2.setFamilies([u"Meiryo"])
-        font2.setPointSize(18)
-        self.btnNewPcRegister.setFont(font2)
+        self.btnNewPcRegister.setFont(font1)
         self.btnNewPcRegister.setStyleSheet(u"QPushButton {\n"
 "    background-color: #E6F0FA;      /* \u901a\u5e38\uff1a\u6de1\u3044\u9752 */\n"
 "    color: #000000;                 /* \u9ed2\u5b57 */\n"
@@ -216,6 +213,9 @@ class Ui_MainWindow(object):
         self.btnLocationReport.setObjectName(u"btnLocationReport")
         self.btnLocationReport.setEnabled(False)
         self.btnLocationReport.setGeometry(QRect(90, 50, 331, 51))
+        font2 = QFont()
+        font2.setFamilies([u"Meiryo"])
+        font2.setPointSize(18)
         self.btnLocationReport.setFont(font2)
         self.btnPcEtcDisposeReport = QPushButton(self.grpOutput)
         self.btnPcEtcDisposeReport.setObjectName(u"btnPcEtcDisposeReport")
