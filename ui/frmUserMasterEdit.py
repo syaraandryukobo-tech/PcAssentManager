@@ -27,7 +27,7 @@ class Ui_Dialog(object):
         Dialog.setMinimumSize(QSize(700, 590))
         Dialog.setMaximumSize(QSize(700, 590))
         Dialog.setStyleSheet(u"QWidget {\n"
-"    background-color: #F0FAF2 ;      /* \u767b\u9332\u30d5\u30a9\u30fc\u30e0\u306e\u6de1\u3044\u7dd1 */\n"
+"    background-color: #F0FAF2 ;      /* \u6de1\u3044\u7dd1 */\n"
 "}")
         self.label_8 = QLabel(Dialog)
         self.label_8.setObjectName(u"label_8")
