@@ -27,7 +27,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget {
-    background-color: #F0FAF2 ;      /* 登録フォームの淡い緑 */
+    background-color: #F0FAF2 ;      /* 淡い緑 */
 }</string>
   </property>
   <widget class="QLabel" name="label_8">
