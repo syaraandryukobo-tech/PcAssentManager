@@ -1,4 +1,5 @@
 from PySide6.QtWidgets import QDialog ,QMessageBox
+from PySide6.QtCore import Qt
 from PySide6.QtCore import QTimer
 from ui.frmPcRegister import Ui_Dialog
 import openpyxl
@@ -25,6 +26,10 @@ class PcNewRegForm(QDialog):
         self.ui.setupUi(self)
         self.ui.lstUser.itemClicked.connect(self.onUserSelected)
         self.ui.lstPc.itemClicked.connect(self.onPcSelected)
+
+        self.ui.btnDecision.setAutoDefault(False)
+        self.ui.btnDecision.setDefault(False)
+        self.ui.cmbUserLocation.setFocus()
 
         # 決定ボタン
         self.ui.btnDecision.clicked.connect(self.onRegisterClicked)
@@ -100,6 +105,13 @@ class PcNewRegForm(QDialog):
         # 初期表示のために明示的に呼ぶ
         initial_location = self.ui.cmbPcYear.currentText()
         self.loadPcsByYear(initial_location)
+
+    def keyPressEvent(self, event):
+        if event.key() in (Qt.Key_Return, Qt.Key_Enter):
+            print("Enter押下")
+            event.ignore()
+            return
+        super().keyPressEvent(event)
 
     def loadUsersByLocation(self, location):
 

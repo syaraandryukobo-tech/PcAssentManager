@@ -13,6 +13,12 @@ class PcMasterForm(QDialog):
         self.ui.txtPcCode.setFocusPolicy(Qt.NoFocus)
         self.ui.txtPcCode.setReadOnly(True)
 
+        self.ui.btnRegister.setAutoDefault(False)
+        self.ui.btnRegister.setDefault(False)
+
+        self.ui.btnClose.setAutoDefault(False)
+        self.ui.btnClose.setDefault(False)
+
         # 登録ボタン
         self.ui.btnRegister.clicked.connect(self.registerPc)
 
@@ -38,12 +44,13 @@ class PcMasterForm(QDialog):
 
     def keyPressEvent(self, event):
         if event.key() in (Qt.Key_Return, Qt.Key_Enter):
+            print("Enter押下")
             event.ignore()
             return
         super().keyPressEvent(event)
 
     def generatePcCode(self):
-    
+        print("genneratePcCode実行")
         # 年度を取得（下2桁を使う）
         year = self.ui.txtYear.text().strip()
     
