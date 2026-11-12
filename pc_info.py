@@ -15,6 +15,15 @@ class PcInfoForm(QDialog):
         self.ui.lblManageNo.setAlignment(Qt.AlignRight | Qt.AlignVCenter)
         self.ui.txtStartDate.setAlignment(Qt.AlignRight | Qt.AlignVCenter)
 
+        self.ui.btnSearch.setAutoDefault(False)
+        self.ui.btnSearch.setDefault(False)
+
+        self.ui.btnUpdate.setAutoDefault(False)
+        self.ui.btnUpdate.setDefault(False)
+
+        self.ui.btnClose.setAutoDefault(False)
+        self.ui.btnClose.setDefault(False)   
+
         # コンボボックスの手入力可否
         self.ui.cmbLocation.setEditable(False)
         
@@ -44,6 +53,12 @@ class PcInfoForm(QDialog):
         # 拠点
         self.ui.cmbLocation.clear()
         self.ui.cmbLocation.addItems(locations)
+
+    def keyPressEvent(self, event):
+        if event.key() in (Qt.Key_Return, Qt.Key_Enter):
+            event.ignore()
+            return
+        super().keyPressEvent(event)
         
     def searchPcinfo(self):
         location = self.ui.cmbLocation.currentText()

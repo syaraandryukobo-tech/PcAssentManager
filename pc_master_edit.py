@@ -1,4 +1,5 @@
 from PySide6.QtWidgets import QDialog,QMessageBox,QTableWidgetItem,QAbstractItemView
+from PySide6.QtCore import Qt
 from ui.frmPcMasterEdit import Ui_Dialog
 import openpyxl
 import os
@@ -11,6 +12,15 @@ class PcMasterEditForm(QDialog):
 
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
+
+        self.ui.btnSearch.setAutoDefault(False)
+        self.ui.btnSearch.setDefault(False)
+
+        self.ui.btnUpdate.setAutoDefault(False)
+        self.ui.btnUpdate.setDefault(False)
+
+        self.ui.btnClose.setAutoDefault(False)
+        self.ui.btnClose.setDefault(False)           
 
         # コンボボックスの手入力可否
         #self.ui.cmbLocation.setEditable(False)
@@ -51,6 +61,12 @@ class PcMasterEditForm(QDialog):
         # 所属
         self.ui.cmbEditPcType.clear()
         self.ui.cmbEditPcType.addItems(pctype)
+
+    def keyPressEvent(self, event):
+        if event.key() in (Qt.Key_Return, Qt.Key_Enter):
+            event.ignore()
+            return
+        super().keyPressEvent(event)
 
     def searchPc(self):
         year =self.ui.txtYear.text()
