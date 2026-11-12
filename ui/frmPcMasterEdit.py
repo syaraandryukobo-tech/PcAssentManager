@@ -248,7 +248,13 @@ class Ui_Dialog(object):
 "    border: 1px solid #4A90E2;   /* \u6de1\u3044\u9752 */\n"
 "    background-color: #FFFFFF;\n"
 "}")
-        QWidget.setTabOrder(self.txtYear, self.btnUpdate)
+        QWidget.setTabOrder(self.txtYear, self.btnSearch)
+        QWidget.setTabOrder(self.btnSearch, self.tblPcMaster)
+        QWidget.setTabOrder(self.tblPcMaster, self.cmbEditMaker)
+        QWidget.setTabOrder(self.cmbEditMaker, self.txtEditModel)
+        QWidget.setTabOrder(self.txtEditModel, self.txtEditModelNo)
+        QWidget.setTabOrder(self.txtEditModelNo, self.cmbEditPcType)
+        QWidget.setTabOrder(self.cmbEditPcType, self.btnUpdate)
         QWidget.setTabOrder(self.btnUpdate, self.btnClose)
 
         self.retranslateUi(Dialog)

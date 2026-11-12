@@ -644,6 +644,11 @@ QPlainTextEdit:focus {
  <tabstops>
   <tabstop>cmbLocation</tabstop>
   <tabstop>txtUserName</tabstop>
+  <tabstop>btnSearch</tabstop>
+  <tabstop>tblPcInfo</tabstop>
+  <tabstop>txtSerialNo</tabstop>
+  <tabstop>txtStartDate</tabstop>
+  <tabstop>txtRemarks</tabstop>
   <tabstop>btnUpdate</tabstop>
   <tabstop>btnClose</tabstop>
  </tabstops>

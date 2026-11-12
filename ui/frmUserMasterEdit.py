@@ -267,7 +267,13 @@ class Ui_Dialog(object):
 "    background-color: #FFFFFF;\n"
 "}")
         QWidget.setTabOrder(self.cmbLocation, self.txtUserName)
-        QWidget.setTabOrder(self.txtUserName, self.btnUpdate)
+        QWidget.setTabOrder(self.txtUserName, self.btnSearch)
+        QWidget.setTabOrder(self.btnSearch, self.tblUserMaster)
+        QWidget.setTabOrder(self.tblUserMaster, self.cmbEditLocation)
+        QWidget.setTabOrder(self.cmbEditLocation, self.cmbEditDepartment)
+        QWidget.setTabOrder(self.cmbEditDepartment, self.txtEditUserName)
+        QWidget.setTabOrder(self.txtEditUserName, self.txtMailAddress)
+        QWidget.setTabOrder(self.txtMailAddress, self.btnUpdate)
         QWidget.setTabOrder(self.btnUpdate, self.btnClose)
 
         self.retranslateUi(Dialog)

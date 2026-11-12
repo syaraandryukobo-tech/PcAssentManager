@@ -556,6 +556,12 @@ QLineEdit:focus {
  <tabstops>
   <tabstop>cmbLocation</tabstop>
   <tabstop>txtUserName</tabstop>
+  <tabstop>btnSearch</tabstop>
+  <tabstop>tblUserMaster</tabstop>
+  <tabstop>cmbEditLocation</tabstop>
+  <tabstop>cmbEditDepartment</tabstop>
+  <tabstop>txtEditUserName</tabstop>
+  <tabstop>txtMailAddress</tabstop>
   <tabstop>btnUpdate</tabstop>
   <tabstop>btnClose</tabstop>
  </tabstops>

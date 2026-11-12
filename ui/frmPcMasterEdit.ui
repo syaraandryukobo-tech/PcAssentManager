@@ -516,6 +516,12 @@ QLineEdit:focus {
  </widget>
  <tabstops>
   <tabstop>txtYear</tabstop>
+  <tabstop>btnSearch</tabstop>
+  <tabstop>tblPcMaster</tabstop>
+  <tabstop>cmbEditMaker</tabstop>
+  <tabstop>txtEditModel</tabstop>
+  <tabstop>txtEditModelNo</tabstop>
+  <tabstop>cmbEditPcType</tabstop>
   <tabstop>btnUpdate</tabstop>
   <tabstop>btnClose</tabstop>
  </tabstops>
