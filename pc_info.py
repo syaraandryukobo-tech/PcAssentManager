@@ -102,7 +102,15 @@ class PcInfoForm(QDialog):
             self.ui.tblPcInfo.setItem(rowPosition, 0,manage_no)
 
             self.ui.tblPcInfo.setItem(rowPosition, 1,QTableWidgetItem(str(row[1])))
-            self.ui.tblPcInfo.setItem(rowPosition, 2,QTableWidgetItem(str(row[4])))
+            # self.ui.tblPcInfo.setItem(rowPosition, 2,QTableWidgetItem(str(row[4])))
+
+            if row[4] is None:
+                user_name_text = ""
+            else:
+                user_name_text = str(row[4])
+
+            user_name = QTableWidgetItem(user_name_text)
+            self.ui.tblPcInfo.setItem(rowPosition, 2, user_name)
 
             if row[12] is None:
                 serial_no_text = ""
@@ -110,7 +118,7 @@ class PcInfoForm(QDialog):
                 serial_no_text = str(row[12])
 
             serial_no = QTableWidgetItem(serial_no_text)
-            self.ui.tblPcInfo.setItem(rowPosition, 3,serial_no)
+            self.ui.tblPcInfo.setItem(rowPosition, 3, serial_no)
 
             if row[13] is None:
                 start_date_text = ""
@@ -121,7 +129,7 @@ class PcInfoForm(QDialog):
 
             start_date = QTableWidgetItem(start_date_text)
             start_date.setTextAlignment(Qt.AlignRight | Qt.AlignVCenter)
-            self.ui.tblPcInfo.setItem(rowPosition, 4,start_date)
+            self.ui.tblPcInfo.setItem(rowPosition, 4, start_date)
 
         totalCount =ws.max_row -1
 
