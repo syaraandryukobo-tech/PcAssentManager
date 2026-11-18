@@ -14,3 +14,8 @@ Python + PySide6 製の業務改善ツールです。
 変更・修正機能
 
 → README_Ver2.0.md
+
+### Ver3.0
+移動･譲渡･予備機機能
+
+→ README_Ver3.0.md
