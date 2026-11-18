@@ -76,16 +76,40 @@ class Ui_MainWindow(object):
 "}")
         self.btnTransfer = QPushButton(self.grpPcInfo)
         self.btnTransfer.setObjectName(u"btnTransfer")
-        self.btnTransfer.setEnabled(False)
+        self.btnTransfer.setEnabled(True)
         self.btnTransfer.setGeometry(QRect(90, 120, 331, 51))
+        self.btnTransfer.setFont(font1)
+        self.btnTransfer.setStyleSheet(u"QPushButton {\n"
+"    background-color: #FFF9E6; /* \u901a\u5e38\uff1a\u6de1\u3044\u9ec4 */\n"
+"    color: #000000;\n"
+"    border: 1px solid #E3D7A5; /* \u6de1\u3044\u9ec4\u306e\u67a0\u7dda */\n"
+"    border-radius: 0px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #FFF3CC; /* \u30db\u30d0\u30fc */\n"
+"    color: #000000;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: #F6F6F6;\n"
+"    color: #808080;\n"
+"    border: 1px solid #D9D9D9;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #F2E4A8; /* \u62bc\u4e0b */\n"
+"    color: #000000;\n"
+"}")
         self.btnDispose = QPushButton(self.grpPcInfo)
         self.btnDispose.setObjectName(u"btnDispose")
         self.btnDispose.setEnabled(False)
         self.btnDispose.setGeometry(QRect(90, 190, 331, 51))
         self.btnSearchEdit = QPushButton(self.grpPcInfo)
         self.btnSearchEdit.setObjectName(u"btnSearchEdit")
-        self.btnSearchEdit.setEnabled(True)
+        self.btnSearchEdit.setEnabled(False)
         self.btnSearchEdit.setGeometry(QRect(90, 270, 331, 51))
+        self.btnSearchEdit.setFont(font1)
         self.btnSearchEdit.setStyleSheet(u"QPushButton {\n"
 "    background-color: #E8F6EC;   /* \u901a\u5e38\uff1a\u6de1\u3044\u7dd1 */\n"
 "    color: #000000;\n"
@@ -96,6 +120,12 @@ class Ui_MainWindow(object):
 "QPushButton:hover {\n"
 "    background-color: #D9EFDF;   /* \u30db\u30d0\u30fc */\n"
 "    color: #000000;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: #F6F6F6;\n"
+"    color: #808080;\n"
+"    border: 1px solid #D9D9D9;\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
@@ -135,8 +165,9 @@ class Ui_MainWindow(object):
 "}")
         self.btnUserMasterEdit = QPushButton(self.grpUserMaster)
         self.btnUserMasterEdit.setObjectName(u"btnUserMasterEdit")
-        self.btnUserMasterEdit.setEnabled(True)
+        self.btnUserMasterEdit.setEnabled(False)
         self.btnUserMasterEdit.setGeometry(QRect(270, 40, 201, 51))
+        self.btnUserMasterEdit.setFont(font1)
         self.btnUserMasterEdit.setStyleSheet(u"QPushButton {\n"
 "    background-color: #E8F6EC;   /* \u901a\u5e38\uff1a\u6de1\u3044\u7dd1 */\n"
 "    color: #000000;\n"
@@ -147,6 +178,12 @@ class Ui_MainWindow(object):
 "QPushButton:hover {\n"
 "    background-color: #D9EFDF;   /* \u30db\u30d0\u30fc */\n"
 "    color: #000000;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: #F6F6F6;\n"
+"    color: #808080;\n"
+"    border: 1px solid #D9D9D9;\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
@@ -187,8 +224,9 @@ class Ui_MainWindow(object):
 "")
         self.btnPcMasterEdit = QPushButton(self.grpPCMaster)
         self.btnPcMasterEdit.setObjectName(u"btnPcMasterEdit")
-        self.btnPcMasterEdit.setEnabled(True)
+        self.btnPcMasterEdit.setEnabled(False)
         self.btnPcMasterEdit.setGeometry(QRect(270, 40, 201, 51))
+        self.btnPcMasterEdit.setFont(font1)
         self.btnPcMasterEdit.setStyleSheet(u"QPushButton {\n"
 "    background-color: #E8F6EC;   /* \u901a\u5e38\uff1a\u6de1\u3044\u7dd1 */\n"
 "    color: #000000;\n"
@@ -199,6 +237,12 @@ class Ui_MainWindow(object):
 "QPushButton:hover {\n"
 "    background-color: #D9EFDF;   /* \u30db\u30d0\u30fc */\n"
 "    color: #000000;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: #F6F6F6;\n"
+"    color: #808080;\n"
+"    border: 1px solid #D9D9D9;\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"

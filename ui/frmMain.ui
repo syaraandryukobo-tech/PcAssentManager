@@ -123,7 +123,7 @@ QPushButton:disabled {
     </widget>
     <widget class="QPushButton" name="btnTransfer">
      <property name="enabled">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <property name="geometry">
       <rect>
@@ -132,6 +132,36 @@ QPushButton:disabled {
        <width>331</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Meiryo</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #FFF9E6; /* 通常：淡い黄 */
+    color: #000000;
+    border: 1px solid #E3D7A5; /* 淡い黄の枠線 */
+    border-radius: 0px;
+}
+
+QPushButton:hover {
+    background-color: #FFF3CC; /* ホバー */
+    color: #000000;
+}
+
+QPushButton:disabled {
+    background-color: #F6F6F6;
+    color: #808080;
+    border: 1px solid #D9D9D9;
+}
+
+QPushButton:pressed {
+    background-color: #F2E4A8; /* 押下 */
+    color: #000000;
+}</string>
      </property>
      <property name="text">
       <string>移動・譲渡・予備機</string>
@@ -155,7 +185,7 @@ QPushButton:disabled {
     </widget>
     <widget class="QPushButton" name="btnSearchEdit">
      <property name="enabled">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="geometry">
       <rect>
@@ -164,6 +194,12 @@ QPushButton:disabled {
        <width>331</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Meiryo</family>
+       <pointsize>20</pointsize>
+      </font>
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
@@ -176,6 +212,12 @@ QPushButton:disabled {
 QPushButton:hover {
     background-color: #D9EFDF;   /* ホバー */
     color: #000000;
+}
+
+QPushButton:disabled {
+    background-color: #F6F6F6;
+    color: #808080;
+    border: 1px solid #D9D9D9;
 }
 
 QPushButton:pressed {
@@ -254,7 +296,7 @@ QPushButton:disabled {
     </widget>
     <widget class="QPushButton" name="btnUserMasterEdit">
      <property name="enabled">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="geometry">
       <rect>
@@ -263,6 +305,12 @@ QPushButton:disabled {
        <width>201</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Meiryo</family>
+       <pointsize>20</pointsize>
+      </font>
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
@@ -275,6 +323,12 @@ QPushButton:disabled {
 QPushButton:hover {
     background-color: #D9EFDF;   /* ホバー */
     color: #000000;
+}
+
+QPushButton:disabled {
+    background-color: #F6F6F6;
+    color: #808080;
+    border: 1px solid #D9D9D9;
 }
 
 QPushButton:pressed {
@@ -354,7 +408,7 @@ QPushButton:pressed {
     </widget>
     <widget class="QPushButton" name="btnPcMasterEdit">
      <property name="enabled">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="geometry">
       <rect>
@@ -363,6 +417,12 @@ QPushButton:pressed {
        <width>201</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Meiryo</family>
+       <pointsize>20</pointsize>
+      </font>
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
@@ -375,6 +435,12 @@ QPushButton:pressed {
 QPushButton:hover {
     background-color: #D9EFDF;   /* ホバー */
     color: #000000;
+}
+
+QPushButton:disabled {
+    background-color: #F6F6F6;
+    color: #808080;
+    border: 1px solid #D9D9D9;
 }
 
 QPushButton:pressed {
